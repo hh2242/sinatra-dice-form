@@ -5,7 +5,7 @@ get("/") do
   erb(:main)
 end
 
-get("/process_form") do
+get("/process_roll") do
   @num_dice = params.fetch("dice").to_i
 
   @sides = params.fetch("sides").to_i
@@ -18,5 +18,5 @@ get("/process_form") do
     @rolls.push(die)
   end
 
-  erb(:flexible)
+  erb(:process_roll)
 end
